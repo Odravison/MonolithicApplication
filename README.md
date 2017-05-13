@@ -18,10 +18,10 @@ List of services and your respective number associated:
 List of all resource available on this application:
 
  ```
- /api//perform-a-get
- /api/perform-a-post
- /api/perform-a-delete
- /api/perform-a-put
+ GET    = /api//perform-a-get
+ POST   = /api/perform-a-post
+ DELETE = /api/perform-a-delete
+ PUT    = /api/perform-a-put
  ```
 
 #### Example:
