@@ -16,8 +16,8 @@ public class PingDataService {
     
     private Logger logger = LoggerFactory.getLogger(PingDataService.class);
 
-    @GetMapping("/ping-data")
-	public ResponseEntity<HttpStatus> pingData(){
+    @GetMapping("/lvl1")
+	public ResponseEntity<HttpStatus> getDataLvl1(){
         
         logger.info("Getting /ping-data");
 		
@@ -25,12 +25,20 @@ public class PingDataService {
 		
 	}
 	
-	@GetMapping("/ping-data/ping-data-from-pong")
-	public ResponseEntity<HttpStatus> pingDataFromPong(){
+	@GetMapping("/lvl2")
+	public ResponseEntity<HttpStatus> getDataLvl2(){
 	    
 	    logger.info("Getting /ping-data-from-pong");
 	    
-	    return pongDataService.pongData();
+	    return pongDataService.pongDataLvl1();
 	}
+	
+	@GetMapping("/lvl3")
+    public ResponseEntity<HttpStatus> getDataLvl3(){
+        
+        logger.info("Getting /ping-data-from-pong");
+        
+        return pongDataService.pongDataLvl2();
+    }
 
 }
